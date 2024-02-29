@@ -40,7 +40,7 @@ def make_turtle(x, y):
         score_turtle.clear()
         score_turtle.write("Score: {}".format(
             score), move=False, align="center", font=FONT)
-        print(x, y)
+        # print(x, y)
 
     t.onclick(handle_click)
     t.penup()
@@ -52,36 +52,14 @@ def make_turtle(x, y):
     turtle_list.append(t)
 
 
-x_coordinates = [-20, -10, 0, 10, 20]
-y_coordinates = [20, 10, 0, -10]
+x_coordinates = random.sample(range(-20, 20), 5)
+y_coordinates = random.sample(range(-10, 20), 4)
 
 
 def setup_turtles():
     for x in x_coordinates:
         for y in y_coordinates:
             make_turtle(x, y)
-    '''
-    make_turtle(-20,20)
-    make_turtle(-10,20)
-    make_turtle(-0,20)
-    make_turtle(10,20)
-    make_turtle(20,20)
-    make_turtle(-20,10)
-    make_turtle(-10,10)
-    make_turtle(-0,10)
-    make_turtle(10,10)
-    make_turtle(20,10)
-    make_turtle(-20,0)
-    make_turtle(-10,0)
-    make_turtle(-0,0)
-    make_turtle(10,0)
-    make_turtle(20,0)
-    make_turtle(-20,-10)
-    make_turtle(-10,-10)
-    make_turtle(-0,-10)
-    make_turtle(10,-10)
-    make_turtle(20,-10)
-    '''
 
 
 def hide_turtles():
