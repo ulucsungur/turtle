@@ -1,5 +1,7 @@
-import random
+
 import turtle
+import random
+
 
 screen = turtle.Screen()
 game_over = False
@@ -25,7 +27,8 @@ def setup_score_turtle():
     top_height = screen.window_height() / 2
     y = top_height - top_height / 10
     score_turtle.setposition(0, y)
-    score_turtle.write(arg='Score: 0', move=False, align='center', font=FONT)
+    score_turtle.write(arg=f'Score: {score}',
+                       move=False, align='center', font=FONT)
 
 
 grid_size = 10
